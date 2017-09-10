@@ -19,6 +19,22 @@ public class Nodo {
         p.setExp(20);
         liga = null;
     }
+
+    public Monomio getP() {
+        return p;
+    }
+
+    public void setP(Monomio p) {
+        this.p = p;
+    }
+
+    public Nodo getLiga() {
+        return liga;
+    }
+
+    public void setLiga(Nodo liga) {
+        this.liga = liga;
+    }
     
     
     
