@@ -47,6 +47,7 @@ public class Polinomio {
     }
     
     public void sumarTerminosSemejantes(){
+        Nodo o = cabeza;
         Nodo p = cabeza.getLiga();
         Nodo q = p;
         Nodo r = q.getLiga();
@@ -56,11 +57,14 @@ public class Polinomio {
                 if(p.getTermino().getExp() == r.getTermino().getExp()){
                     aux = p.getTermino().getCoef() + r.getTermino().getCoef();
                     if(aux == 0){
-                        
+                        o.setLiga(p.getLiga());
+                        p = o.getLiga();
+                        q.setLiga(r.getLiga());
+                        r = q.getLiga();
                     }else{
-                    p.getTermino().setCoef(aux);
-                    q.setLiga(r.getLiga());
-                    r = q.getLiga();    
+                        p.getTermino().setCoef(aux);
+                        q.setLiga(r.getLiga());
+                        r = q.getLiga();    
                     }
                        
                 }else{
@@ -68,6 +72,7 @@ public class Polinomio {
                     r = r.getLiga();
                 }
             }
+            o = p;
             p = p.getLiga();
             q = p;
             r = q.getLiga();
