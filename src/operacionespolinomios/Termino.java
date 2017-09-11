@@ -9,12 +9,12 @@ package operacionespolinomios;
  *
  * @author Felipe
  */
-public class Monomio {
+public class Termino {
     
     private int coef;
     private int exp;
 
-    public Monomio(int coef, int exp) {
+    public Termino(int coef, int exp) {
         this.coef = coef;
         this.exp = exp;
     }

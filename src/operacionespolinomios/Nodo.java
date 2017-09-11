@@ -11,21 +11,16 @@ package operacionespolinomios;
  */
 public class Nodo {
     
-    private Monomio p;
+    private Termino t;
     private Nodo liga;
-    
-    public Nodo(Monomio p){
-        p.setCoef(10);
-        p.setExp(20);
+
+    public Nodo(Termino m) {
+        this.t = m;
         liga = null;
     }
-
-    public Monomio getP() {
-        return p;
-    }
-
-    public void setP(Monomio p) {
-        this.p = p;
+    
+    public Termino getTermino() {
+        return t;
     }
 
     public Nodo getLiga() {
@@ -36,6 +31,6 @@ public class Nodo {
         this.liga = liga;
     }
     
+   
+    }
     
-    
-}
