@@ -16,17 +16,20 @@ public class Calculadora {
     
     public void Sumar(Polinomio a, Polinomio b){
         
-        
+        // se parece a la de terminos semejantes
+        //crear una nueva lista ligada (polinomio)
+        //Funciones de Polinomio
     }
     
     public void Multiplicar(Polinomio a, Polinomio b){
         
-        
+     //crear una nueva lista ligada (polinomio)  
+     //
     }
     
     public void Derivar(Polinomio a, Polinomio b){
         
-        
+        //crear una nueva lista ligada (polinomio)
         
     }
 }
