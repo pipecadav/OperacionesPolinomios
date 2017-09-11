@@ -68,6 +68,34 @@ public class Polinomio {
             r = q.getLiga();
         }
     }
+    public void DerivarPolinomio(){
+        Nodo p = cabeza.getLiga();
+        Nodo q = cabeza;
+        int aux;
+        while(p != null){
+            if(p.getTermino().getExp() != 0){
+                aux = p.getTermino().getExp()*p.getTermino().getCoef();
+                p.getTermino().setCoef(aux);
+                p.getTermino().setExp(p.getTermino().getExp()-1);
+                p = p.getLiga();
+                q = q.getLiga();
+            }else{
+                q.setLiga(p.getLiga());
+                q = q.getLiga();
+            }
+        }
+    }
+    public void MultiplicarPorCoef(int x){
+        Nodo p = cabeza.getLiga();
+        int aux;
+        while (p != null){
+            aux = p.getTermino().getCoef()*x;
+            p.getTermino().setCoef(aux);
+        }
+    }
+    public void MultiplicarPolinomios(){
+        
+    }
 }
     
 
