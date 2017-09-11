@@ -15,7 +15,7 @@ public class Polinomio {
     private Nodo ultimo;
     private Nodo x;
     private Nodo y;
-    private Termino m = new Termino(0,1);
+    private Termino m = new Termino(0,0);
     
     public Polinomio(){
         cabeza = new Nodo(m);
@@ -55,9 +55,14 @@ public class Polinomio {
             while(r != null){
                 if(p.getTermino().getExp() == r.getTermino().getExp()){
                     aux = p.getTermino().getCoef() + r.getTermino().getCoef();
+                    if(aux == 0){
+                        
+                    }else{
                     p.getTermino().setCoef(aux);
                     q.setLiga(r.getLiga());
-                    r = q.getLiga();   
+                    r = q.getLiga();    
+                    }
+                       
                 }else{
                     q = r;
                     r = r.getLiga();
