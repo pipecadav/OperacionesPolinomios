@@ -13,7 +13,9 @@ public class Calculadora{
     
     private Polinomio polinomioEnListaLigada;
 
-    
+    public Calculadora() {
+    }
+
     public void Sumar(Polinomio a, Polinomio b){
         polinomioEnListaLigada = new Polinomio();
         polinomioEnListaLigada = a;
@@ -60,4 +62,10 @@ public class Calculadora{
             }
         }
     }
+
+    public Polinomio getPolinomioEnListaLigada() {
+        return polinomioEnListaLigada;
+    }
+    
+    
 }
