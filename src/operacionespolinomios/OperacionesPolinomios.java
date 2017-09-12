@@ -13,6 +13,8 @@ import java.util.Scanner;
  */
 public class OperacionesPolinomios {
 
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -20,11 +22,11 @@ public class OperacionesPolinomios {
         // TODO code application logic here
         int coeficiente = 0, exponente = 0, terminos = 0;
         Termino elMonomio;
-        Polinomio elPolinomio = new Polinomio();
-        
+        Polinomio elPolinomio1 = new Polinomio();
+        Polinomio elPolinomio2 = new Polinomio();
         Scanner objRead = new Scanner(System.in);
         
-        System.out.println("Cantidad de Terminos");
+        System.out.println("Cantidad de Terminos polinomio 1");
         terminos = objRead.nextInt();
         
         for(int i = 0; i < terminos; i++){
@@ -32,19 +34,19 @@ public class OperacionesPolinomios {
             coeficiente = objRead.nextInt();
             System.out.println("Ingrese Exponente");
             exponente = objRead.nextInt();
-            elPolinomio.AlmacenarTermino(coeficiente, exponente);
+            elPolinomio1.AlmacenarTermino(coeficiente, exponente);
         }
+        
+        System.out.println("Cantidad de Terminos polinomio 2");
+        terminos = objRead.nextInt();
         
         for(int i = 0; i < terminos; i++){
-        System.out.println(elPolinomio.MostrarCoeficiente()+", "+elPolinomio.MostrarExponente());
-        }
-        
-        elPolinomio.sumarTerminosSemejantes();
-        
-        for(int i = 0; i < terminos; i++){
-            System.out.println(elPolinomio.MostrarCoeficiente()+", "+elPolinomio.MostrarExponente());
-        }
-            
+            System.out.println("Ingrese Coeficiente");
+            coeficiente = objRead.nextInt();
+            System.out.println("Ingrese Exponente");
+            exponente = objRead.nextInt();
+            elPolinomio1.AlmacenarTermino(coeficiente, exponente);
+        }    
 
         
         
