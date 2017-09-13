@@ -75,7 +75,7 @@ public class Polinomio {
             o = p;
             p = p.getLiga();
             q = p;
-            r = q.getLiga();
+            //r = q.getLiga();
         }
     }
    

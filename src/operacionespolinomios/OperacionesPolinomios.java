@@ -39,35 +39,10 @@ public class OperacionesPolinomios {
             exponente = objRead.nextInt();
             elPolinomio1.AlmacenarTermino(coeficiente, exponente);
         }
+        elPolinomio1.sumarTerminosSemejantes();
         
-        System.out.println("Cantidad de Terminos polinomio 2");
-        terminos = objRead.nextInt();
-        
-        for(int i = 0; i < terminos; i++){
-            System.out.println("Ingrese Coeficiente");
-            coeficiente = objRead.nextInt();
-            System.out.println("Ingrese Exponente");
-            exponente = objRead.nextInt();
-            elPolinomio2.AlmacenarTermino(coeficiente, exponente);
-        }    
-
-        calculoPolinomios.Sumar(elPolinomio1, elPolinomio2);
-        
-        while(calculoPolinomios.getPolinomioEnListaLigada().MostrarCoeficiente() != 0){
-            System.out.println(calculoPolinomios.getPolinomioEnListaLigada().MostrarCoeficiente() +
-                                ", " + calculoPolinomios.getPolinomioEnListaLigada().MostrarExponente());
-            
-        }
-
-        calculoPolinomios.Multiplicar(elPolinomio1, elPolinomio2);
-        
-        while(calculoPolinomios.getPolinomioEnListaLigada().MostrarCoeficiente() != 0){
-            System.out.println(calculoPolinomios.getPolinomioEnListaLigada().MostrarCoeficiente() +
-                                ", " + calculoPolinomios.getPolinomioEnListaLigada().MostrarExponente());
-        }
-            
-        calculoPolinomios.Derivar(elPolinomio1);
-        
+        System.out.println(elPolinomio1.MostrarCoeficiente());
+        System.out.println(elPolinomio1.MostrarExponente());
         
     }
     
