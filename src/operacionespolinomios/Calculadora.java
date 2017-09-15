@@ -45,7 +45,7 @@ public class Calculadora{
            p = p.getLiga();
            q = b.getCabeza().getLiga();
        }
-               
+       polinomioEnListaLigada.sumarTerminosSemejantes();        
     }
     
     public void Derivar(Polinomio c){
