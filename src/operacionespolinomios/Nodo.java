@@ -7,7 +7,11 @@ package operacionespolinomios;
 
 /**
  *
- * @author Felipe
+ * @author Felipe Cadavid
+ * @author Carolina Diaz
+ * @author Luis Angel Vanegas
+ * @version 14-09-2017
+ * 
  */
 public class Nodo {
     

@@ -1,13 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Están almacenados los miembro de clase para ejecutar
+ * las operaciones con los polinomios
  */
 package operacionespolinomios;
 
 /**
  *
- * @author Felipe
+ * @author Felipe Cadavid
+ * @author Carolina Diaz
+ * @author Luis Angel Vanegas
+ * @version 14-09-2017
+ * 
  */
 public class Calculadora{
     

@@ -1,13 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Esta clase crea un polinomio y lo almacena
+ * en una lista ligada
  */
 package operacionespolinomios;
 
 /**
  *
- * @author Felipe
+ * @author Felipe Cadavid
+ * @author Carolina Diaz
+ * @author Luis Angel Vanegas
+ * @version 14-09-2017
+ * 
  */
 public class Polinomio {
     
@@ -15,20 +18,30 @@ public class Polinomio {
     private Nodo ultimo;
     private Nodo x;
     private Nodo y;
-    private Termino m = new Termino(0,0);
+    private Termino m = new Termino(0,0); 
     
+    /*Constructor
+    * Crea un nuevo objeto de la clase polinomio
+    */
     public Polinomio(){
         cabeza = new Nodo(m);
         ultimo = x = y = cabeza;
         
     }
     
+    /*Este método crea un nuevo nodo que almacena
+    * los términos que se vayan ingresando al polinomio
+    */  
     public void AlmacenarTermino(int coef, int exp){
         Termino t = new Termino(coef, exp);
         Nodo p = new Nodo (t);
         ultimo.setLiga(p);
         ultimo = p;
     }
+    
+    /*Método que recorre la lista para mostrar el Coeficiente
+    * de cada nodo
+    */
     
     public int MostrarCoeficiente(){
         x = x.getLiga();
@@ -38,6 +51,9 @@ public class Polinomio {
         return(x.getTermino().getCoef());
     }
     
+    /*Método que recorre la lista para mostrar el Exponente
+    * de cada nodo
+    */
     public int MostrarExponente(){
         y = y.getLiga();
         if(y == null){
@@ -46,6 +62,10 @@ public class Polinomio {
         return(y.getTermino().getExp());
     }
     
+    /*Este método agrupa los términos semejantes de un polinomio
+    * Es decir, si 2 o más terminos tienen el mismo exponente
+    * estos términos se suman (o restan, dependiento del caso)
+    */
     public void sumarTerminosSemejantes(){
         Nodo o = cabeza;
         Nodo p = cabeza.getLiga();
