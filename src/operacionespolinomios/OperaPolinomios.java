@@ -5,6 +5,8 @@
  */
 package operacionespolinomios;
 
+import java.util.regex.Pattern;
+
 /**
  *
  * @author Carolina
@@ -125,7 +127,19 @@ public class OperaPolinomios extends javax.swing.JFrame {
     }//GEN-LAST:event_PolinomioBActionPerformed
 
     private void IngresarAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarAActionPerformed
-        // TODO add your handling code here:
+        Polinomio polinom = new Polinomio();
+        String polinomioA = PolinomioA.getText();
+        String partes[];
+        String separar[];
+        partes = polinomioA.split(Pattern.quote("+"));
+        int cantidadTerminos = partes.length;
+        for(int i = 0; i<cantidadTerminos; i++){
+            separar = partes[i].split(Pattern.quote("X"));
+            int a = Integer.parseInt(separar[0]);
+            int b = Integer.parseInt(separar[1]);
+            polinom.AlmacenarTermino(a, b);
+        }
+        
     }//GEN-LAST:event_IngresarAActionPerformed
 
     private void IngresarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarBActionPerformed
