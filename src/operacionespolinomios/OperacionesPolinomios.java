@@ -32,7 +32,7 @@ public class OperacionesPolinomios {
         //Calculadora calculoPolinomios = new Calculadora();
         Scanner objRead = new Scanner(System.in);
         
-        while(terminos < 4 ){
+        while(terminos < 5 ){
             System.out.println("Ingrese Coeficiente");
             coeficiente = objRead.nextInt();
             System.out.println("Ingrese Exponente");
@@ -43,26 +43,22 @@ public class OperacionesPolinomios {
         }
         terminos = 0;
         
+        while(terminos < 5){
+        System.out.println(elPolinomio1.MostrarCoeficiente()+", "+
+                           +elPolinomio1.MostrarExponente()) ;
+        terminos++;    
+        }
+ 
+        elPolinomio1.sumarTerminosSemejantes();
+        System.out.println("------------------------------");
+        terminos = 0;
+        
         while(terminos < 4){
         System.out.println(elPolinomio1.MostrarCoeficiente()+", "+
                            +elPolinomio1.MostrarExponente()) ;
         terminos++;    
         }
-            
-        
-        
-        /*
-        *for(int i = 0; i < terminos; i++){
-        *    System.out.println("Ingrese Coeficiente");
-        *    coeficiente = objRead.nextInt();
-        *    System.out.println("Ingrese Exponente");
-        *    exponente = objRead.nextInt();
-        *    elPolinomio1.AlmacenarTermino(coeficiente, exponente);
-        *}
-        *
-        *System.out.println(elPolinomio1.MostrarCoeficiente());
-        *System.out.println(elPolinomio1.MostrarExponente());
-        */
+
     }
     
 }

@@ -95,7 +95,9 @@ public class Polinomio {
             o = p;
             p = p.getLiga();
             q = p;
-            //r = q.getLiga();
+            if(p != null){
+                r = q.getLiga();
+            }
         }
     }
    
