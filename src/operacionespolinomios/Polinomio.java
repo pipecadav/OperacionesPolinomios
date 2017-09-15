@@ -21,7 +21,7 @@ public class Polinomio {
     private Termino m = new Termino(0,0); 
     
     /*Constructor
-    * Crea un nuevo objeto de la clase polinomio
+    * Crea un nuevo nodo con almacenando un obejto de la clase polinomio
     */
     public Polinomio(){
         cabeza = new Nodo(m);
