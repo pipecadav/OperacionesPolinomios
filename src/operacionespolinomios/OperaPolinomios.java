@@ -13,6 +13,8 @@ import java.util.regex.Pattern;
  */
 public class OperaPolinomios extends javax.swing.JFrame {
 
+    Polinomio polinomB = new Polinomio();
+    Polinomio polinomA = new Polinomio();
     /**
      * Creates new form OperaPolinomios
      */
@@ -127,7 +129,7 @@ public class OperaPolinomios extends javax.swing.JFrame {
     }//GEN-LAST:event_PolinomioBActionPerformed
 
     private void IngresarAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarAActionPerformed
-        Polinomio polinom = new Polinomio();
+
         String polinomioA = PolinomioA.getText();
         String partes[];
         String separar[];
@@ -137,17 +139,32 @@ public class OperaPolinomios extends javax.swing.JFrame {
             separar = partes[i].split(Pattern.quote("X"));
             int a = Integer.parseInt(separar[0]);
             int b = Integer.parseInt(separar[1]);
-            polinom.AlmacenarTermino(a, b);
+            polinomA.AlmacenarTermino(a, b);
         }
         
     }//GEN-LAST:event_IngresarAActionPerformed
 
     private void IngresarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarBActionPerformed
-        // TODO add your handling code here:
+        
+        String polinomioB = PolinomioB.getText();
+        String partes[];
+        String separar[];
+        partes = polinomioB.split(Pattern.quote("+"));
+        int cantidadTerminos = partes.length;
+        for(int i = 0; i<cantidadTerminos; i++){
+            separar = partes[i].split(Pattern.quote("X"));
+            int a = Integer.parseInt(separar[0]);
+            int b = Integer.parseInt(separar[1]);
+            polinomB.AlmacenarTermino(a, b);
+        }
     }//GEN-LAST:event_IngresarBActionPerformed
 
     private void SumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumarActionPerformed
-        // TODO add your handling code here:
+        Calculadora calcular = new Calculadora();
+        String resul;
+        
+        resul = calcular.Sumar(polinomA, polinomB);
+        Resultado.setText(resul);
     }//GEN-LAST:event_SumarActionPerformed
 
     /**

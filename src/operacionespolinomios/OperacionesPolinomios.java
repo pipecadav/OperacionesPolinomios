@@ -6,6 +6,7 @@
 package operacionespolinomios;
 
 import java.util.Scanner;
+ 
 
 /**
  *
@@ -29,7 +30,7 @@ public class OperacionesPolinomios {
         Termino elMonomio;
         Polinomio elPolinomio1 = new Polinomio();
         Polinomio elPolinomio2 = new Polinomio();
-        //Calculadora calculoPolinomios = new Calculadora();
+        Calculadora calculoPolinomios = new Calculadora();
         Scanner objRead = new Scanner(System.in);
         
         while(terminos < 3){
@@ -58,6 +59,8 @@ public class OperacionesPolinomios {
                            +elPolinomio1.MostrarExponente()) ;
         terminos++;    
         }
+        
+        calculoPolinomios.Sumar(elPolinomio1, elPolinomio2);
 
     }
     
