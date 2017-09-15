@@ -18,6 +18,21 @@ public class OperaPolinomios extends javax.swing.JFrame {
     /**
      * Creates new form OperaPolinomios
      */
+    
+    public static Polinomio SepararPolinomio(String pPolinomio){ 
+        Polinomio unPolinomio = new Polinomio();
+        String Pol = " ";
+        String partes[];
+        String separar[];
+        partes = Pol.split(Pattern.quote("+"));
+        for(int i = 0; i<partes.length; i++){
+            separar = partes[i].split(Pattern.quote("X"));
+            int a = Integer.parseInt(separar[0]);
+            int b = Integer.parseInt(separar[1]);
+            unPolinomio.AlmacenarTermino(a, b);
+        }
+        return unPolinomio;
+    }    
     public OperaPolinomios() {
         initComponents();
     }
@@ -39,8 +54,6 @@ public class OperaPolinomios extends javax.swing.JFrame {
         MultiplicarCoef = new javax.swing.JButton();
         MutiplicarPolinomios = new javax.swing.JButton();
         Derivar = new javax.swing.JButton();
-        IngresarA = new javax.swing.JButton();
-        IngresarB = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultado = new javax.swing.JTextArea();
 
@@ -92,24 +105,6 @@ public class OperaPolinomios extends javax.swing.JFrame {
         Derivar.setText("Derivar polinomio");
         getContentPane().add(Derivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 200, -1));
 
-        IngresarA.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        IngresarA.setText("Ingresar");
-        IngresarA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresarAActionPerformed(evt);
-            }
-        });
-        getContentPane().add(IngresarA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 90, -1));
-
-        IngresarB.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        IngresarB.setText("Ingresar");
-        IngresarB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresarBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(IngresarB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 90, -1));
-
         Resultado.setColumns(20);
         Resultado.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Resultado.setRows(5);
@@ -128,43 +123,9 @@ public class OperaPolinomios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PolinomioBActionPerformed
 
-    private void IngresarAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarAActionPerformed
-
-        String polinomioA = PolinomioA.getText();
-        String partes[];
-        String separar[];
-        partes = polinomioA.split(Pattern.quote("+"));
-        int cantidadTerminos = partes.length;
-        for(int i = 0; i<cantidadTerminos; i++){
-            separar = partes[i].split(Pattern.quote("X"));
-            int a = Integer.parseInt(separar[0]);
-            int b = Integer.parseInt(separar[1]);
-            polinomA.AlmacenarTermino(a, b);
-        }
-        
-    }//GEN-LAST:event_IngresarAActionPerformed
-
-    private void IngresarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarBActionPerformed
-        
-        String polinomioB = PolinomioB.getText();
-        String partes[];
-        String separar[];
-        partes = polinomioB.split(Pattern.quote("+"));
-        int cantidadTerminos = partes.length;
-        for(int i = 0; i<cantidadTerminos; i++){
-            separar = partes[i].split(Pattern.quote("X"));
-            int a = Integer.parseInt(separar[0]);
-            int b = Integer.parseInt(separar[1]);
-            polinomB.AlmacenarTermino(a, b);
-        }
-    }//GEN-LAST:event_IngresarBActionPerformed
-
     private void SumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumarActionPerformed
-        Calculadora calcular = new Calculadora();
-        String resul;
-        
-        resul = calcular.Sumar(polinomA, polinomB);
-        Resultado.setText(resul);
+       
+       
     }//GEN-LAST:event_SumarActionPerformed
 
     /**
@@ -204,8 +165,6 @@ public class OperaPolinomios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Derivar;
-    private javax.swing.JButton IngresarA;
-    private javax.swing.JButton IngresarB;
     private javax.swing.JButton MultiplicarCoef;
     private javax.swing.JButton MutiplicarPolinomios;
     private javax.swing.JTextField PolinomioA;
