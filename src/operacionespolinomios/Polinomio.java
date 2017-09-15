@@ -80,6 +80,7 @@ public class Polinomio {
                         o.setLiga(p.getLiga().getLiga());
                         p = o.getLiga();
                         q = p;
+                        r = q.getLiga();
                     }
                 }else if(p.getTermino().getExp() == r.getTermino().getExp()){
                     aux = p.getTermino().getCoef() + r.getTermino().getCoef();
