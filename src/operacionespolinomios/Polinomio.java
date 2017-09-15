@@ -43,12 +43,12 @@ public class Polinomio {
     * de cada nodo
     */
     
-    public int MostrarCoeficiente(){
+    public String MostrarTermino(){
         x = x.getLiga();
         if(x == null){
             x = cabeza;
         }
-        return(x.getTermino().getCoef());
+        return(x.getTermino().getCoef()+"X"+x.getTermino().getExp());
     }
     
     /*Método que recorre la lista para mostrar el Exponente
@@ -84,7 +84,6 @@ public class Polinomio {
                         if(p != null){
                             r = q.getLiga();
                         }
-
                     }
                 }
                 if((p != null) &&  (p.getTermino().getExp() == r.getTermino().getExp())){

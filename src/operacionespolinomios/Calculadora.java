@@ -17,7 +17,7 @@ public class Calculadora{
     public Calculadora() {
     }
 
-    public void Sumar(Polinomio a, Polinomio b){
+    public String Sumar(Polinomio a, Polinomio b){
         polinomioEnListaLigada = new Polinomio();
         polinomioEnListaLigada = a;
         Nodo p = b.getCabeza().getLiga();
@@ -26,6 +26,14 @@ public class Calculadora{
             p = p.getLiga();
         }
         polinomioEnListaLigada.sumarTerminosSemejantes();
+        Nodo q = polinomioEnListaLigada.getCabeza().getLiga();
+        String resultado = " ";
+        while(q != null){
+            resultado = polinomioEnListaLigada.MostrarTermino()+"+";
+             
+        }
+        
+        return resultado;
     }    
     public void Multiplicar(Polinomio a, Polinomio b){
        polinomioEnListaLigada = new Polinomio();
