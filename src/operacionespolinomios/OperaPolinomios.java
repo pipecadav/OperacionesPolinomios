@@ -15,16 +15,17 @@ public class OperaPolinomios extends javax.swing.JFrame {
 
     Polinomio polinomB = new Polinomio();
     Polinomio polinomA = new Polinomio();
+    
     /**
      * Creates new form OperaPolinomios
      */
     
     public static Polinomio SepararPolinomio(String pPolinomio){ 
         Polinomio unPolinomio = new Polinomio();
-        String Pol = " ";
+        String ingreso = pPolinomio;
         String partes[];
         String separar[];
-        partes = Pol.split(Pattern.quote("+"));
+        partes = ingreso.split(Pattern.quote("+"));
         for(int i = 0; i<partes.length; i++){
             separar = partes[i].split(Pattern.quote("X"));
             int a = Integer.parseInt(separar[0]);
