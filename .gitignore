@@ -2,5 +2,11 @@
 nbproject/private/private.xml
 nbproject/private/private.xml
 nbproject/private/private.properties
+<<<<<<< HEAD
 build/classes/operacionespolinomios/Polinomio.class
 build/classes/operacionespolinomios/Polinomio.class
+=======
+src/operacionespolinomios/Polinomio.java
+src/operacionespolinomios/Polinomio.java
+>>>>>>> ad73af4f0434de4369232d6052d561fb9ee5aa5c
+nbproject/private/private.properties
