@@ -74,7 +74,14 @@ public class Polinomio {
         int aux;
         while(p != null){
             while(r != null){
-                if(p.getTermino().getExp() == r.getTermino().getExp()){
+                if(p.getTermino().getExp() == p.getLiga().getTermino().getExp()){
+                    aux = p.getTermino().getCoef() + p.getLiga().getTermino().getCoef();
+                    if(aux==0){
+                        o.setLiga(p.getLiga().getLiga());
+                        p = o.getLiga();
+                        q = p;
+                    }
+                }else if(p.getTermino().getExp() == r.getTermino().getExp()){
                     aux = p.getTermino().getCoef() + r.getTermino().getCoef();
                     if(aux == 0){
                         o.setLiga(p.getLiga());
