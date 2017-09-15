@@ -80,13 +80,11 @@ public class Polinomio {
                         o.setLiga(p.getLiga().getLiga());
                         p = o.getLiga();
                         q = p;
-<<<<<<< HEAD
+
                         if(p != null){
                             r = q.getLiga();
                         }
-=======
-                        r = q.getLiga();
->>>>>>> dbdd6c8c0e47e0ccea84b96cf983f4e63e1cace8
+
                     }
                 }
                 if((p != null) &&  (p.getTermino().getExp() == r.getTermino().getExp())){
