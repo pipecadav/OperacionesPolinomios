@@ -1,16 +1,14 @@
-/*
+/**
  * Están almacenados los miembro de clase para ejecutar
  * las operaciones con los polinomios
  */
 package operacionespolinomios;
 
 /**
- *
  * @author Felipe Cadavid
  * @author Carolina Diaz
  * @author Luis Angel Vanegas
  * @version 14-09-2017
- * 
  */
 public class Calculadora{
     
