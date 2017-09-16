@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/Carolina/Documents/NetBeansProjects/OperacionesPolinomios/src/operacionespolinomios/OperaPolinomios.java</file>
+            <file>file:/C:/Users/Carolina/Documents/NetBeansProjects/OperacionesPolinomios/src/operacionespolinomios/Polinomio.java</file>
+            <file>file:/C:/Users/Carolina/Documents/NetBeansProjects/OperacionesPolinomios/src/operacionespolinomios/Calculadora.java</file>
+        </group>
+>>>>>>> 42ebba020f4ee22a5013fda0b599dc8fd4c7747a
     </open-files>
 </project-private>
