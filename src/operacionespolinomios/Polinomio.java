@@ -109,13 +109,19 @@ public class Polinomio {
     * Este método permite multiplicar un termino independiente por un monomio
     *  o Polinomio
     */
-    public void MultiplicarPorCoef(int x){
-        Nodo p = cabeza.getLiga();
+    public String MultiplicarPorCoef(Polinomio c, int x){
+        Nodo p = c.getCabeza().getLiga();
         int aux;
         while (p != null){
             aux = p.getTermino().getCoef()*x;
             p.getTermino().setCoef(aux);
         }
+        String resultado = " ";
+        p = c.getCabeza().getLiga();
+        while(p != null){
+            resultado = resultado + "+" + c.MostrarTermino();
+        }
+        return resultado;
     }
 
     public Nodo getCabeza() {
