@@ -18,8 +18,10 @@ public class Calculadora {
     }
 
     /**
-     * Este método recibe 2 objetos de la clase polinomio como parámetro. Ambos
-     * polinomios son simplificados
+     * Este método recibe 2 objetos de la clase polinomio como parámetro, ambos polinomios son simplificados
+     * @param a Polinomio
+     * @param b Polinomio
+     * @return Strign suma de los polinomios
      */
     public String Sumar(Polinomio a, Polinomio b) {
         polinomioEnListaLigada = new Polinomio();
@@ -59,10 +61,12 @@ public class Calculadora {
         return resultado;
     }
 
-    /*  
+    /** 
     * Esta función permite multiplicar polinomios previamente ingresados
-    * El resultado de la multiplicación almacena sus términos en 
-    * un polinomio (lista ligada nueva). Los datos no son organizados por grado
+    * El resultado de la multiplicación almacena sus términos en un polinomio (lista ligada nueva). 
+    * @param a Polinomio
+    * @param b Polinomio
+    * @return String resultado de la multiplicación de los polinomios
      */
     public String Multiplicar(Polinomio a, Polinomio b) {
         polinomioEnListaLigada = new Polinomio();
@@ -92,8 +96,10 @@ public class Calculadora {
         return resultado;
     }
 
-    /*  
+    /**
     * Dado un polinomio, esta función realiza la derivada de sus términos
+    * @param c objeto polinomio
+    * @return String resultado
      */
     public String Derivar(Polinomio c) {
         Nodo p = c.getCabeza().getLiga();
@@ -119,7 +125,11 @@ public class Calculadora {
         }
         return resultado;
     }
-
+    
+    /**
+     * Retorna el polinomio resultante de una operacón
+     * @return Polinomio
+     */
     public Polinomio getPolinomioEnListaLigada() {
         return polinomioEnListaLigada;
     }

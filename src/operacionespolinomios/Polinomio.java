@@ -19,18 +19,20 @@ public class Polinomio {
     private Nodo x;
     private Termino m = new Termino(0,0); 
     
-    /*Constructor
-    * Crea un nuevo nodo con almacenando un obejto de la clase polinomio
-    */
+    /**
+     * Crea un nuevo nodo con almacenando un obejto de la clase polinomio
+     */
     public Polinomio(){
         cabeza = new Nodo(m);
         ultimo = x = cabeza;
         
     }
     
-    /*Este método crea un nuevo nodo que almacena
-    * los términos que se vayan ingresando al polinomio
-    */  
+    /**
+     * Este método crea un nuevo nodo que almacena los términos que se vayan ingresando al polinomio
+     * @param coef entero
+     * @param exp entero
+     */
     public void AlmacenarTermino(int coef, int exp){
         Termino t = new Termino(coef, exp);
         Nodo p = new Nodo (t);
@@ -38,10 +40,10 @@ public class Polinomio {
         ultimo = p;
     }
     
-    /*Método que recorre la lista para mostrar el Coeficiente
-    * de cada nodo
-    */
-    
+    /**
+     * Método que recorre la lista para mostrar el Coeficiente de cada nodo
+     * @return el término en String
+     */
     public String MostrarTermino(){
         x = x.getLiga();
         if(x == null){
@@ -51,12 +53,9 @@ public class Polinomio {
     }
     
     
-    /*Este método agrupa los términos semejantes de un polinomio
-    * Es decir, si 2 o más términos tienen el mismo exponente
-    * estos términos se suman (o restan, dependiento del caso)
-    * Se permite sumar términos semejantes si estan uno seguido del 
-    *  
-    */
+    /**
+     * Este método agrupa los términos semejantes de un polinomio
+     */
     public void sumarTerminosSemejantes(){
         Nodo o = cabeza;
         Nodo p = cabeza.getLiga();
@@ -105,10 +104,13 @@ public class Polinomio {
             }
         }
     }
-   /*  
-    * Este método permite multiplicar un termino independiente por un monomio
-    *  o Polinomio
-    */
+  
+    /**
+     * Este método permite multiplicar un termino independiente por un monomio o Polinomio
+     * @param c Polinomio
+     * @param x entero
+     * @return un String con el resultado de la multiplicación
+     */
     public String MultiplicarPorCoef(Polinomio c, int x){
         Nodo p = c.getCabeza().getLiga();
         int aux;
