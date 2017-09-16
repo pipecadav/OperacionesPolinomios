@@ -116,7 +116,6 @@ public class Calculadora {
         while (r != null) {
             resultado = resultado + "+" + c.MostrarTermino();
             r = r.getLiga();
-
         }
         return resultado;
     }

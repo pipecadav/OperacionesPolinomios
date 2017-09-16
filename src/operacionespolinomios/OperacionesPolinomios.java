@@ -73,7 +73,7 @@ public class OperacionesPolinomios {
         
         tercerPol = calcular.getPolinomioEnListaLigada();
         
-        System.out.println(calcular.Derivar(tercerPol));
+        System.out.println(calcular.Derivar(primerPol));
         
         
         
