@@ -5,7 +5,6 @@
 package operacionespolinomios;
 
 /**
- *
  * @author Felipe Cadavid
  * @author Carolina Diaz
  * @author Luis Angel Vanegas

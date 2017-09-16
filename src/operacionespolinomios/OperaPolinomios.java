@@ -8,8 +8,11 @@ package operacionespolinomios;
 import java.util.regex.Pattern;
 
 /**
- *
- * @author Carolina
+ * @author Felipe Cadavid
+ * @author Carolina Diaz
+ * @author Luis Angel Vanegas
+ * @version 14-09-2017
+ * 
  */
 public class OperaPolinomios extends javax.swing.JFrame {
 
