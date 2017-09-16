@@ -58,15 +58,12 @@ public class OperaPolinomios extends javax.swing.JFrame {
         Resultado = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jLabel2.setText("Ingrese Polinomios");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jLabel1.setText("Resultado");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, -1, -1));
 
         PolinomioA.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         PolinomioA.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +71,6 @@ public class OperaPolinomios extends javax.swing.JFrame {
                 PolinomioAActionPerformed(evt);
             }
         });
-        getContentPane().add(PolinomioA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 91, 170, 30));
 
         PolinomioB.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         PolinomioB.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +78,6 @@ public class OperaPolinomios extends javax.swing.JFrame {
                 PolinomioBActionPerformed(evt);
             }
         });
-        getContentPane().add(PolinomioB, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 91, 170, 30));
 
         Sumar.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Sumar.setText("Sumar dos polinomios");
@@ -91,26 +86,76 @@ public class OperaPolinomios extends javax.swing.JFrame {
                 SumarActionPerformed(evt);
             }
         });
-        getContentPane().add(Sumar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 200, -1));
 
         MultiplicarCoef.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         MultiplicarCoef.setText("Multiplicar por coeficiente");
-        getContentPane().add(MultiplicarCoef, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 200, -1));
 
         MutiplicarPolinomios.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         MutiplicarPolinomios.setText("Multiplicar dos polinomios");
-        getContentPane().add(MutiplicarPolinomios, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 200, -1));
 
         Derivar.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Derivar.setText("Derivar polinomio");
-        getContentPane().add(Derivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 200, -1));
 
         Resultado.setColumns(20);
         Resultado.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Resultado.setRows(5);
         jScrollPane1.setViewportView(Resultado);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 240, 90));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(jLabel2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(PolinomioA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(130, 130, 130)
+                .addComponent(PolinomioB, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Derivar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MutiplicarPolinomios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MultiplicarCoef, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Sumar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel2)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PolinomioA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PolinomioB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(119, 119, 119)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(90, 90, 90)
+                                .addComponent(Derivar))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addComponent(MutiplicarPolinomios))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(MultiplicarCoef))
+                            .addComponent(Sumar)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(12, 12, 12)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
