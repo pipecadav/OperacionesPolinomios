@@ -16,4 +16,13 @@ nbproject/private/private.properties
 nbproject/private/private.xml
 *.xml
 *.properties
+<<<<<<< HEAD
+build/classes/operacionespolinomios/OperaPolinomios.class
+build/classes/operacionespolinomios/OperaPolinomios.class
+=======
 *.xml
+>>>>>>> 0c34dc9f4b2afe43bd9d33a3603141b420294beb
+nbproject/private/private.xml
+build/classes/operacionespolinomios/OperaPolinomios.class
+build/classes/operacionespolinomios/OperaPolinomios$2.class
+*.class
