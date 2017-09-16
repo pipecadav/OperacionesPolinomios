@@ -29,13 +29,14 @@ public class Calculadora{
         Nodo q = polinomioEnListaLigada.getCabeza().getLiga();
         String resultado = " ";
         while(q != null){
-            resultado = polinomioEnListaLigada.MostrarTermino()+"+";
+        resultado = polinomioEnListaLigada.MostrarTermino()+"+";
+        q = q.getLiga();
              
         }
         
         return resultado;
     }    
-    public void Multiplicar(Polinomio a, Polinomio b){
+    public String Multiplicar(Polinomio a, Polinomio b){
        polinomioEnListaLigada = new Polinomio();
        Nodo p = a.getCabeza().getLiga();
        Nodo q = b.getCabeza().getLiga();
@@ -51,7 +52,16 @@ public class Calculadora{
            p = p.getLiga();
            q = b.getCabeza().getLiga();
        }
-       polinomioEnListaLigada.sumarTerminosSemejantes();        
+       polinomioEnListaLigada.sumarTerminosSemejantes();   
+       Nodo r = polinomioEnListaLigada.getCabeza().getLiga();
+        String resultado = " ";
+        while(r != null){
+        resultado = polinomioEnListaLigada.MostrarTermino()+"+"+resultado;
+        r = r.getLiga();
+             
+        }
+        
+        return resultado;
     }
     
     public void Derivar(Polinomio c){

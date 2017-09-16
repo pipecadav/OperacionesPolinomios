@@ -6,6 +6,7 @@
 package operacionespolinomios;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
  
 
 /**
@@ -19,6 +20,21 @@ import java.util.Scanner;
 public class OperacionesPolinomios {
 
     
+    public static Polinomio SepararPolinomio(String pPolinomio){ 
+        Polinomio unPolinomio = new Polinomio();
+        String Pol = pPolinomio;
+        String partes[];
+        String separar[];
+        partes = Pol.split(Pattern.quote("+"));
+        for(int i = 0; i<partes.length; i++){
+            separar = partes[i].split(Pattern.quote("X"));
+            int a = Integer.parseInt(separar[0]);
+            int b = Integer.parseInt(separar[1]);
+            unPolinomio.AlmacenarTermino(a, b);
+        }
+        return unPolinomio;
+    }    
+    
     
     /**
      * @param args the command line arguments
@@ -26,42 +42,33 @@ public class OperacionesPolinomios {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int coeficiente = 0, exponente = 0, terminos = 0;
-        Termino elMonomio;
-        Polinomio elPolinomio1 = new Polinomio();
-        Polinomio elPolinomio2 = new Polinomio();
-        Calculadora calculoPolinomios = new Calculadora();
         Scanner objRead = new Scanner(System.in);
+        Calculadora calcular = new Calculadora();
+        String entrada1;
+        String entrada2;
+        Polinomio primerPol;
+        Polinomio segundoPol;
+        String resultadoSuma;
         
-        while(terminos < 3){
-            System.out.println("Ingrese Coeficiente");
-            coeficiente = objRead.nextInt();
-            System.out.println("Ingrese Exponente");
-            exponente = objRead.nextInt();
-            elPolinomio1.AlmacenarTermino(coeficiente, exponente);
-            terminos++;
-            
-        }
-        terminos = 0;
+        System.out.println("Ingrese Polinomio 1");
+        entrada1 = objRead.next();
+        System.out.println("Ingrese Polinomio 2");
+        entrada2 = objRead.next();
         
-        while(terminos < 3){
-        System.out.println(elPolinomio1.MostrarCoeficiente()+", "+
-                           +elPolinomio1.MostrarExponente()) ;
-        terminos++;    
-        }
- 
-        elPolinomio1.sumarTerminosSemejantes();
-        System.out.println("------------------------------");
-        terminos = 0;
         
-        while(terminos < 2){
-        System.out.println(elPolinomio1.MostrarCoeficiente()+", "+
-                           +elPolinomio1.MostrarExponente()) ;
-        terminos++;    
-        }
+        primerPol = SepararPolinomio(entrada1);
+        segundoPol = SepararPolinomio(entrada2);
         
-        calculoPolinomios.Sumar(elPolinomio1, elPolinomio2);
-
+        
+        System.out.println(calcular.Multiplicar(primerPol, segundoPol));
+        
+        
+        
+        
+        
+        
+        
+        
     }
-    
 }
+
