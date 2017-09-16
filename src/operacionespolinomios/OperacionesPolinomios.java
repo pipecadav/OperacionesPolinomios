@@ -52,10 +52,7 @@ public class OperacionesPolinomios {
         Polinomio primerPol;
         Polinomio segundoPol;
         Polinomio tercerPol;
-        String resultadoSuma;
-        String resultadoMultiplicacion;
-        String resultadoDerivada;
-        
+
         System.out.println("Ingrese Polinomio 1");
         entrada1 = objRead.next();
         
