@@ -19,7 +19,9 @@ import java.util.regex.Pattern;
  */
 public class OperacionesPolinomios {
 
-    
+    /**
+    * Recibe la entrada del polinomio del usuario en formato String
+    */
     public static Polinomio SepararPolinomio(String pPolinomio){ 
         Polinomio unPolinomio = new Polinomio();
         String Pol = pPolinomio;
@@ -32,6 +34,7 @@ public class OperacionesPolinomios {
             int b = Integer.parseInt(separar[1]);
             unPolinomio.AlmacenarTermino(a, b);
         }
+        
         return unPolinomio;
     }    
     
@@ -48,19 +51,29 @@ public class OperacionesPolinomios {
         String entrada2;
         Polinomio primerPol;
         Polinomio segundoPol;
+        Polinomio tercerPol;
         String resultadoSuma;
+        String resultadoMultiplicacion;
+        String resultadoDerivada;
         
         System.out.println("Ingrese Polinomio 1");
         entrada1 = objRead.next();
+        
         System.out.println("Ingrese Polinomio 2");
         entrada2 = objRead.next();
         
         
-        primerPol = SepararPolinomio(entrada1);
-        segundoPol = SepararPolinomio(entrada2);
+        
+        primerPol = SepararPolinomio(entrada1.toUpperCase());
+        segundoPol = SepararPolinomio(entrada2.toUpperCase());
         
         
         System.out.println(calcular.Multiplicar(primerPol, segundoPol));
+        //System.out.println(calcular.Sumar(primerPol, segundoPol));
+        
+        tercerPol = calcular.getPolinomioEnListaLigada();
+        
+        System.out.println(calcular.Derivar(tercerPol));
         
         
         
