@@ -16,26 +16,54 @@ public class Calculadora{
 
     public Calculadora() {
     }
-
+    
+    /**
+    * Este método recibe 2 objetos  de la clase polinomio como parámetro.     
+    * Ambos polinomios son simplificados
+    */
     public String Sumar(Polinomio a, Polinomio b){
         polinomioEnListaLigada = new Polinomio();
-        polinomioEnListaLigada = a;
-        Nodo p = b.getCabeza().getLiga();
+        Nodo p = a.getCabeza().getLiga();
+        Nodo q = b.getCabeza().getLiga();
+        int auxCoef;
+        while(p != null && q != null){
+            if(p.getTermino().getExp() == q.getTermino().getExp()){
+                    auxCoef = p.getTermino().getCoef() + q.getTermino().getCoef();
+                    if(auxCoef != 0){
+                      polinomioEnListaLigada.AlmacenarTermino(auxCoef, p.getTermino().getExp());
+                    }
+                    p = p.getLiga();
+                    q = q.getLiga();
+            }else if(p.getTermino().getExp() < q.getTermino().getExp()){
+                polinomioEnListaLigada.AlmacenarTermino(q.getTermino().getCoef(),q.getTermino().getExp());
+                q = q.getLiga();
+            }else if(p.getTermino().getExp() > q.getTermino().getExp()){
+                polinomioEnListaLigada.AlmacenarTermino(p.getTermino().getCoef(),p.getTermino().getExp());
+                p = p.getLiga();
+            }
+        }
         while(p != null){
             polinomioEnListaLigada.AlmacenarTermino(p.getTermino().getCoef(), p.getTermino().getExp());
             p = p.getLiga();
         }
-        polinomioEnListaLigada.sumarTerminosSemejantes();
-        Nodo q = polinomioEnListaLigada.getCabeza().getLiga();
-        String resultado = " ";
         while(q != null){
-        resultado = polinomioEnListaLigada.MostrarTermino()+"+";
-        q = q.getLiga();
-             
+            polinomioEnListaLigada.AlmacenarTermino(q.getTermino().getCoef(), q.getTermino().getExp());
+            q = q.getLiga();
         }
-        
+        Nodo r = polinomioEnListaLigada.getCabeza().getLiga();
+        String resultado = " ";
+        while(r != null){
+        resultado = resultado+"+"+polinomioEnListaLigada.MostrarTermino();
+        r = r.getLiga();     
+        }
         return resultado;
     }    
+    
+    /*  
+    * Esta función permite multiplicar polinomios previamente ingresados
+    * El resultado de la multiplicación almacena sus términos en 
+    * un polinomio (lista ligada nueva). Los datos no son organizados por grado
+    */
     public String Multiplicar(Polinomio a, Polinomio b){
        polinomioEnListaLigada = new Polinomio();
        Nodo p = a.getCabeza().getLiga();
@@ -54,17 +82,20 @@ public class Calculadora{
        }
        polinomioEnListaLigada.sumarTerminosSemejantes();   
        Nodo r = polinomioEnListaLigada.getCabeza().getLiga();
-        String resultado = " ";
-        while(r != null){
-        resultado = polinomioEnListaLigada.MostrarTermino()+"+"+resultado;
-        r = r.getLiga();
+       String resultado = " ";
+       while(r != null){
+            resultado = resultado+"+"+polinomioEnListaLigada.MostrarTermino();
+            r = r.getLiga();
              
         }
         
         return resultado;
     }
     
-    public void Derivar(Polinomio c){
+    /*  
+    * Dado un polinomio, esta función realiza la derivada de sus términos
+    */
+    public String Derivar(Polinomio c){
         Nodo p = c.getCabeza().getLiga();
         Nodo q = c.getCabeza();
         int aux;
@@ -80,6 +111,14 @@ public class Calculadora{
                 q = q.getLiga();
             }
         }
+        Nodo r = c.getCabeza().getLiga();
+       String resultado = " ";
+       while(r != null){
+            resultado = resultado+"+"+c.MostrarTermino();
+            r = r.getLiga();
+             
+        }
+       return resultado;
     }
 
     public Polinomio getPolinomioEnListaLigada() {

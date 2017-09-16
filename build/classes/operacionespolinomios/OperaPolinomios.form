@@ -36,10 +36,10 @@
           <Group type="102" attributes="0">
               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Sumar" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="MultiplicarCoef" min="-2" pref="200" max="-2" attributes="0"/>
                   <Component id="Derivar" min="-2" pref="200" max="-2" attributes="0"/>
                   <Component id="MutiplicarPolinomios" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="MultiplicarCoef" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="Sumar" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -68,18 +68,20 @@
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Sumar" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                      <Component id="MultiplicarCoef" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
                               <Component id="Derivar" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                               <Component id="MutiplicarPolinomios" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                              <Component id="MultiplicarCoef" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="Sumar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">

@@ -17,7 +17,6 @@ public class Polinomio {
     private Nodo cabeza;
     private Nodo ultimo;
     private Nodo x;
-    private Nodo y;
     private Termino m = new Termino(0,0); 
     
     /*Constructor
@@ -25,7 +24,7 @@ public class Polinomio {
     */
     public Polinomio(){
         cabeza = new Nodo(m);
-        ultimo = x = y = cabeza;
+        ultimo = x = cabeza;
         
     }
     
@@ -51,20 +50,12 @@ public class Polinomio {
         return(x.getTermino().getCoef()+"X"+x.getTermino().getExp());
     }
     
-    /*Método que recorre la lista para mostrar el Exponente
-    * de cada nodo
-    */
-    public int MostrarExponente(){
-        y = y.getLiga();
-        if(y == null){
-            y = cabeza;
-        }
-        return(y.getTermino().getExp());
-    }
     
     /*Este método agrupa los términos semejantes de un polinomio
-    * Es decir, si 2 o más terminos tienen el mismo exponente
+    * Es decir, si 2 o más términos tienen el mismo exponente
     * estos términos se suman (o restan, dependiento del caso)
+    * Se permite sumar términos semejantes si estan uno seguido del 
+    *  
     */
     public void sumarTerminosSemejantes(){
         Nodo o = cabeza;
@@ -114,7 +105,10 @@ public class Polinomio {
             }
         }
     }
-   
+   /*  
+    * Este método permite multiplicar un termino independiente por un monomio
+    *  o Polinomio
+    */
     public void MultiplicarPorCoef(int x){
         Nodo p = cabeza.getLiga();
         int aux;
@@ -132,16 +126,6 @@ public class Polinomio {
         return ultimo;
     }
 
-    public Nodo getX() {
-        return x;
-    }
-
-    public Nodo getY() {
-        return y;
-    }
-
-    
-    
 }
     
 
